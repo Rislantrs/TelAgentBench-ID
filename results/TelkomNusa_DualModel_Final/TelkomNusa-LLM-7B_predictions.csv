@@ -1,0 +1,347 @@
+id,type,is_abstention,raw_response,tool_accuracy,arg_match,strict_ast,format_valid,abstention_acc,category,latency_s,bleu4,rouge_l
+telco_simple_0,Single-Turn,False,"<tool_call>
+{""name"": ""GET__rate_unpaid-bills"", ""arguments"": ""{\""svcMgmtNum\"":\""0102223333\"",\""startDt\"":\""20250617\"",\""endDt\"":\""20250617\""}""}
+</tool_call>",1.0,1.0,1.0,1.0,1.0,Correct,13.195732831954956,0.0,41.67
+telco_simple_1,Single-Turn,False,"<tool_call>
+{""name"": ""GET__rate_family_real-time-bill"", ""arguments"": ""{\""familySvcMgmtNum\"":\""01011112222\"",\""svcMgmtNum\"":\""01022221111\""}""}
+</tool_call>",1.0,1.0,1.0,1.0,1.0,Correct,13.321052551269531,0.0,50.0
+telco_simple_2,Single-Turn,False,"<tool_call>
+{""name"": ""GET__plan_remained-contracts"", ""arguments"": ""{\""svcMgmtNum\"":\""0101113333\""}""}
+</tool_call>",1.0,1.0,1.0,1.0,1.0,Correct,10.322438478469849,0.0,50.0
+telco_simple_3,Single-Turn,False,"<tool_call>
+{""name"": ""GET__plan"", ""arguments"": ""{\""minProdAmt\"": 300000, \""maxProdAmt\"": 500000}""}
+</tool_call>",1.0,0.0,0.0,1.0,1.0,"Correct Tool, Wrong Arguments",10.600626707077026,0.0,23.08
+telco_simple_4,Single-Turn,False,"<tool_call>
+{""name"": ""DELETE__rate_auto-payment"", ""arguments"": ""{\""svcMgmtNum\"":\""01099993333\""}""}
+</tool_call>",1.0,1.0,1.0,1.0,1.0,Correct,9.872864007949829,0.0,50.0
+telco_simple_5,Single-Turn,False,"<tool_call>
+{""name"": ""GET__rate_current-bills"", ""arguments"": ""{\""svcMgmtNum\"":\""0102225555\""}""}
+</tool_call>",1.0,1.0,1.0,1.0,1.0,Correct,9.791345596313477,0.0,50.0
+telco_simple_6,Single-Turn,False,"<tool_call>
+{""name"": ""GET__rate_unpaid-bills"", ""arguments"": ""{\""svcMgmtNum\"":\""01033334444\""}""}
+</tool_call>",1.0,1.0,1.0,1.0,1.0,Correct,10.059843301773071,0.0,50.0
+telco_simple_7,Single-Turn,False,"<tool_call>
+{""name"": ""POST__rate_unpaid-bills_payment"", ""arguments"": ""{\""svcMgmtNum\"":\""0101110000\""}""}
+</tool_call>",1.0,1.0,1.0,1.0,1.0,Correct,10.094339370727539,0.0,54.55
+telco_simple_8,Single-Turn,False,"<tool_call>
+{""name"": ""GET__rate_family_info"", ""arguments"": ""{\""svcMgmtNum\"":\""0107779999\""}""}
+</tool_call>",1.0,1.0,1.0,1.0,1.0,Correct,9.939672708511353,0.0,50.0
+telco_simple_9,Single-Turn,False,"<tool_call>
+{""name"": ""GET__rate_current-data-limits"", ""arguments"": ""{\""svcMgmtNum\"":\""0101118888\""}""}
+</tool_call>",1.0,1.0,1.0,1.0,1.0,Correct,10.178078651428223,0.0,54.55
+telco_simple_10,Single-Turn,False,"<tool_call>
+{""name"": ""GET__plan_roaming"", ""arguments"": ""{\""countryCode\"":\""GB\"",\""countryName\"":\""Inggris\""}""}
+</tool_call>",1.0,0.0,0.0,1.0,1.0,"Correct Tool, Wrong Arguments",9.357268333435059,0.0,36.36
+telco_simple_11,Single-Turn,False,"<tool_call>
+{""name"": ""GET__rate_current-data-limits"", ""arguments"": ""{\""svcMgmtNum\"":\""01077778888\""}""}
+</tool_call>",1.0,1.0,1.0,1.0,1.0,Correct,10.21398639678955,0.0,54.55
+telco_simple_12,Single-Turn,False,"<tool_call>
+{""name"": ""GET__plan_remained-contracts"", ""arguments"": ""{\""svcMgmtNum\"":\""0101118888\"",\""date\"":\""2025-06-17\""}""}
+</tool_call>",1.0,1.0,1.0,1.0,1.0,Correct,11.641382455825806,0.0,41.67
+telco_simple_13,Single-Turn,False,"<tool_call>
+{""name"": ""GET__rate_unpaid-bills"", ""arguments"": ""{\""svcMgmtNum\"":\""0102223333\"",\""startDt\"":\""20250617\"",\""endDt\"":\""20250617\""}""}
+</tool_call>",0.0,0.0,0.0,1.0,0.0,Wrong Tool (Pred: GET__rate_unpaid-bills vs Gold: POST__rate_unpaid-bills_payment),12.840489149093628,0.0,32.0
+telco_simple_14,Single-Turn,False,"<tool_call>
+{""name"": ""GET__rate_current-data-limits"", ""arguments"": ""{\""svcMgmtNum\"":\""0102223333\""}""}
+</tool_call>",0.0,0.0,0.0,1.0,0.0,Wrong Tool (Pred: GET__rate_current-data-limits vs Gold: GET__rate_family_data-usage),10.081400632858276,0.0,33.33
+telco_simple_15,Single-Turn,False,"<tool_call>
+{""name"": ""POST__rate_unpaid-bills_payment"", ""arguments"": ""{\""svcMgmtNum\"":\""0105556666\""}""}
+</tool_call>",0.0,0.0,0.0,1.0,0.0,Wrong Tool (Pred: POST__rate_unpaid-bills_payment vs Gold: POST__plan_roaming_subscriptions),10.294302225112915,0.0,26.09
+telco_simple_16,Single-Turn,False,"<tool_call>
+{""name"": ""GET__rate_add-on-subscriptions"", ""arguments"": ""{\""svcMgmtNum\"":\""0103335555\""}""}
+</tool_call>",1.0,1.0,1.0,1.0,1.0,Correct,10.0995352268219,0.0,54.55
+telco_simple_17,Single-Turn,False,"<tool_call>
+{""name"": ""DELETE__rate_auto-payment"", ""arguments"": ""{\""svcMgmtNum\"":\""01022222222\""}""}
+</tool_call>",1.0,1.0,1.0,1.0,1.0,Correct,9.949004650115967,0.0,50.0
+telco_simple_18,Single-Turn,False,"<tool_call>
+{""name"": ""GET__plan"", ""arguments"": ""{\""minProdAmt\"": 50000, \""maxProdAmt\"": 100000, \""minProdAge\"": 18, \""maxProdAge\"": 65}""}
+</tool_call>",1.0,1.0,1.0,1.0,1.0,Correct,12.730464458465576,0.0,20.0
+telco_simple_19,Single-Turn,False,"<tool_call>
+{""name"": ""DELETE__plan_roaming_subscriptions"", ""arguments"": ""{\""svcMgmtNum\"":\""0101118888\""}""}
+</tool_call>",0.0,0.0,0.0,1.0,0.0,Wrong Tool (Pred: DELETE__plan_roaming_subscriptions vs Gold: DELETE__rate_auto-payment),10.05623483657837,0.0,30.0
+telco_simple_20,Single-Turn,False,"<tool_call>
+{""name"": ""GET__rate_add-on-subscriptions"", ""arguments"": ""{\""svcMgmtNum\"":\""0108889999\""}""}
+</tool_call>",1.0,1.0,1.0,1.0,1.0,Correct,10.144713163375854,0.0,54.55
+telco_simple_21,Single-Turn,False,"<tool_call>
+{""name"": ""DELETE__plan_roaming_subscriptions"", ""arguments"": ""{\""svcMgmtNum\"":\""0101118888\""}""}
+</tool_call>",1.0,1.0,1.0,1.0,1.0,Correct,10.108280181884766,0.0,50.0
+telco_simple_22,Single-Turn,False,"<tool_call>
+{""name"": ""GET__plan_remained-contracts"", ""arguments"": ""{\""svcMgmtNum\"":\""01077778888\""}""}
+</tool_call>",1.0,1.0,1.0,1.0,1.0,Correct,10.193410158157349,0.0,50.0
+telco_simple_23,Single-Turn,False,"<tool_call>
+{""name"": ""POST__rate_refill-coupons_use"", ""arguments"": ""{\""rfilTrgtltm\"":\""data\"",\""svcMgmtNum\"":\""01012123921\""}""}
+</tool_call>",1.0,1.0,1.0,1.0,1.0,Correct,11.51719617843628,0.0,46.15
+telco_simple_24,Single-Turn,False,"<tool_call>
+{""name"": ""GET__rate_refill-coupons"", ""arguments"": ""{\""svcMgmtNum\"":\""0101113333\""}""}
+</tool_call>",1.0,1.0,1.0,1.0,1.0,Correct,10.1710684299469,0.0,50.0
+telco_simple_25,Single-Turn,False,"<tool_call>
+{""name"": ""POST__rate_unpaid-bills_payment"", ""arguments"": ""{\""svcMgmtNum\"":\""0102225555\""}""}
+</tool_call>",1.0,1.0,1.0,1.0,1.0,Correct,10.188223361968994,0.0,54.55
+telco_simple_26,Single-Turn,False,"<tool_call>
+{""name"": ""GET__rate_mobile-payments"", ""arguments"": ""{\""svcMgmtNum\"":\""0101113333\"",\""startDt\"":\""20250601\"",\""endDt\"":\""20250617\""}""}
+</tool_call>",1.0,1.0,1.0,1.0,1.0,Correct,12.935211420059204,0.0,35.71
+telco_simple_27,Single-Turn,False,"<tool_call>
+{""name"": ""GET__rate_fixed-bills"", ""arguments"": ""{\""startDt\"": \""20250401\"", \""endDt\"": \""20250531\"", \""svcMgmtNum\"": \""0101118888\""}""}
+</tool_call>",1.0,1.0,1.0,1.0,1.0,Correct,13.641449928283691,0.0,35.71
+telco_simple_28,Single-Turn,False,"<tool_call>
+{""name"": ""GET__rate_family_bills"", ""arguments"": ""{\""familySvcMgmtNum\"":\""01033333333\"",\""svcMgmtNum\"":\""01012123921\""}""}
+</tool_call>",1.0,1.0,1.0,1.0,1.0,Correct,12.384046792984009,0.0,41.67
+telco_simple_29,Single-Turn,False,"<tool_call>
+{""name"": ""GET__info"", ""arguments"": ""{\""svcMgmtNum\"":\""0102225555\""}""}
+</tool_call>",1.0,1.0,1.0,1.0,1.0,Correct,9.61475396156311,0.0,37.5
+telco_simple_30,Single-Turn,False,"<tool_call>
+{""name"": ""GET__rate_fixed-bills"", ""arguments"": ""{\""startDt\"": \""20250501\"", \""endDt\"": \""20250630\"", \""svcMgmtNum\"": \""0104445555\""}""}
+</tool_call>",1.0,1.0,1.0,1.0,1.0,Correct,13.517802953720093,0.0,35.71
+telco_simple_31,Single-Turn,False,"<tool_call>
+{""name"": ""DELETE__rate_add-on-subscriptions"", ""arguments"": ""{\""prodId\"": \""AD00000001\"", \""svcMgmtNum\"": \""0105556666\""}""}
+</tool_call>",1.0,1.0,1.0,1.0,1.0,Correct,12.043099403381348,0.0,46.15
+telco_simple_32,Single-Turn,False,"<tool_call>
+{""name"": ""GET__rate_mobile-payments"", ""arguments"": ""{\""svcMgmtNum\"":\""0105556666\"",\""startDt\"":\""20250601\"",\""endDt\"":\""20250617\""}""}
+</tool_call>",1.0,1.0,1.0,1.0,1.0,Correct,13.027473449707031,0.0,35.71
+telco_simple_33,Single-Turn,False,"<tool_call>
+{""name"": ""GET__rate_family_bills"", ""arguments"": ""{\""familySvcMgmtNum\"":\""01033334444\"",\""svcMgmtNum\"":\""01099993333\""}""}
+</tool_call>",1.0,1.0,1.0,1.0,1.0,Correct,12.303929090499878,0.0,41.67
+telco_simple_34,Single-Turn,False,"<tool_call>
+{""name"": ""GET__rate_current-bills"", ""arguments"": ""{\""svcMgmtNum\"":\""0102220000\""}""}
+</tool_call>",1.0,1.0,1.0,1.0,1.0,Correct,9.977640628814697,0.0,50.0
+telco_simple_35,Single-Turn,False,"<tool_call>
+{""name"": ""GET__rate_mobile-payments"", ""arguments"": ""{\""svcMgmtNum\"":\""01033333333\"",\""startDt\"":\""20250601\"",\""endDt\"":\""20250615\""}""}
+</tool_call>",1.0,1.0,1.0,1.0,1.0,Correct,13.147014617919922,0.0,35.71
+telco_simple_36,Single-Turn,False,"<tool_call>
+{""name"": ""GET__rate_current-data-limits"", ""arguments"": ""{\""svcMgmtNum\"":\""0101113333\""}""}
+</tool_call>",1.0,1.0,1.0,1.0,1.0,Correct,10.122430324554443,0.0,54.55
+telco_simple_37,Single-Turn,False,"<tool_call>
+{""name"": ""GET__rate_add-on-subscriptions"", ""arguments"": ""{\""svcMgmtNum\"":\""01022221111\""}""}
+</tool_call>",1.0,1.0,1.0,1.0,1.0,Correct,10.169391870498657,0.0,54.55
+telco_simple_38,Single-Turn,False,"<tool_call>
+{""name"": ""POST__rate_unpaid-bills_payment"", ""arguments"": ""{\""svcMgmtNum\"":\""0102220000\""}""}
+</tool_call>",0.0,0.0,0.0,1.0,0.0,Wrong Tool (Pred: POST__rate_unpaid-bills_payment vs Gold: POST__plan_roaming_subscriptions),10.332076787948608,0.0,26.09
+telco_simple_39,Single-Turn,False,"<tool_call>
+{""name"": ""GET__rate_content-purchases"", ""arguments"": ""{\""startDt\"": \""20250501\"", \""endDt\"": \""20250531\"", \""svcMgmtNum\"": \""0107779999\""}""}
+</tool_call>",1.0,1.0,1.0,1.0,1.0,Correct,13.432896614074707,0.0,35.71
+telco_simple_40,Single-Turn,False,"<tool_call>
+{""name"": ""POST__rate_unpaid-bills_payment"", ""arguments"": ""{\""svcMgmtNum\"":\""01033333333\""}""}
+</tool_call>",0.0,0.0,0.0,1.0,0.0,Wrong Tool (Pred: POST__rate_unpaid-bills_payment vs Gold: POST__plan_roaming_subscriptions),10.361204624176025,0.0,26.09
+telco_simple_41,Single-Turn,False,"<tool_call>
+{""name"": ""GET__plan"", ""arguments"": ""{\""minProdAmt\"": 0, \""maxProdAmt\"": 500000, \""minProdAge\"": 18, \""maxProdAge\"": 100}""}
+</tool_call>",1.0,1.0,1.0,1.0,1.0,Correct,12.136443853378296,0.0,20.0
+telco_simple_42,Single-Turn,False,"<tool_call>
+{""name"": ""GET__rate_unpaid-bills"", ""arguments"": ""{\""svcMgmtNum\"":\""01012123921\""}""}
+</tool_call>",1.0,1.0,1.0,1.0,1.0,Correct,10.164491415023804,0.0,50.0
+telco_simple_43,Single-Turn,False,"<tool_call>
+{""name"": ""GET__rate_mobile-payments"", ""arguments"": ""{\""svcMgmtNum\"":\""0105556666\"",\""startDt\"":\""20250601\"",\""endDt\"":\""20250617\""}""}
+</tool_call>",1.0,1.0,1.0,1.0,1.0,Correct,12.898447751998901,0.0,35.71
+telco_simple_44,Single-Turn,False,"<tool_call>
+{""name"": ""GET__rate_unpaid-bills"", ""arguments"": ""{\""svcMgmtNum\"":\""0101118888\""}""}
+</tool_call>",1.0,1.0,1.0,1.0,1.0,Correct,10.057649850845337,0.0,50.0
+telco_simple_45,Single-Turn,False,"<tool_call>
+{""name"": ""DELETE__plan_roaming_subscriptions"", ""arguments"": ""{\""svcMgmtNum\"":\""0107779999\""}""}
+</tool_call>",1.0,1.0,1.0,1.0,1.0,Correct,10.103928804397583,0.0,50.0
+telco_simple_46,Single-Turn,False,"<tool_call>
+{""name"": ""GET__rate_fixed-bills"", ""arguments"": ""{\""startDt\"": \""20250501\"", \""endDt\"": \""20250531\"", \""svcMgmtNum\"": \""0105556666\""}""}
+</tool_call>",1.0,1.0,1.0,1.0,1.0,Correct,13.391494750976562,0.0,35.71
+telco_simple_47,Single-Turn,False,"<tool_call>
+{""name"": ""DELETE__rate_add-on-subscriptions"", ""arguments"": ""{\""prodId\"": \""AD00000003\"", \""svcMgmtNum\"": \""01099993333\""}""}
+</tool_call>",1.0,1.0,1.0,1.0,1.0,Correct,12.173919439315796,0.0,46.15
+telco_simple_48,Single-Turn,False,"<tool_call>
+{""name"": ""GET__rate_family_data-usage"", ""arguments"": ""{\""familySvcMgmtNum\"":\""01022221111\"",\""svcMgmtNum\"":\""01011112222\""}""}
+</tool_call>",1.0,1.0,1.0,1.0,1.0,Correct,12.445665121078491,0.0,46.15
+telco_simple_49,Single-Turn,False,"<tool_call>
+{""name"": ""GET__rate_content-purchases"", ""arguments"": ""{\""startDt\"": \""20250601\"", \""endDt\"": \""20250630\"", \""svcMgmtNum\"": \""01011115555\""}""}
+</tool_call>",1.0,1.0,1.0,1.0,1.0,Correct,13.539350032806396,0.0,35.71
+telco_simple_50,Single-Turn,False,"<tool_call>
+{""name"": ""DELETE__rate_add-on-subscriptions"", ""arguments"": ""{\""prodId\"":\""AD00000006\"",\""svcMgmtNum\"":\""0101118888\""}""}
+</tool_call>",1.0,1.0,1.0,1.0,1.0,Correct,11.659725666046143,0.0,46.15
+telco_simple_51,Single-Turn,False,"<tool_call>
+{""name"": ""GET__rate_add-on-subscriptions"", ""arguments"": ""{\""svcMgmtNum\"":\""01099993333\""}""}
+</tool_call>",1.0,1.0,1.0,1.0,1.0,Correct,10.143062114715576,0.0,54.55
+telco_simple_52,Single-Turn,False,"<tool_call>
+{""name"": ""GET__rate_current-bills"", ""arguments"": ""{\""svcMgmtNum\"":\""01022221111\""}""}
+</tool_call>",1.0,1.0,1.0,1.0,1.0,Correct,10.096250295639038,0.0,50.0
+telco_simple_53,Single-Turn,False,"<tool_call>
+{""name"": ""GET__plan_roaming"", ""arguments"": ""{\""countryCode\"":\""US\"",\""countryName\"":\""Amerika Serikat\""}""}
+</tool_call>",1.0,0.0,0.0,1.0,1.0,"Correct Tool, Wrong Arguments",9.792560577392578,0.0,34.78
+telco_simple_54,Single-Turn,False,"<tool_call>
+{""name"": ""GET__rate_refill-coupons"", ""arguments"": ""{\""svcMgmtNum\"":\""0101118888\""}""}
+</tool_call>",1.0,1.0,1.0,1.0,1.0,Correct,10.185210466384888,0.0,50.0
+telco_live_irrelevance_0,Single-Turn,True,"<tool_call>
+{""name"": ""GET__rate_add-on-subscriptions"", ""arguments"": ""{\""svcMgmtNum\"":\""08127462081\""}""}
+</tool_call>",0.0,0.0,0.0,1.0,0.0,Spurious Tool Call (Failed Abstention),10.181996822357178,0.0,0.0
+telco_live_irrelevance_1,Single-Turn,True,Halo Kak! Boleh dibantu informasikan nomor handphone Nomor Manajemen Layanan (svcMgmtNum) suami Kakak untuk kami bantu turunkan jatah pembayaran otomatis?,1.0,1.0,1.0,1.0,1.0,Correct (Abstention),11.465204238891602,0.0,0.0
+telco_live_irrelevance_2,Single-Turn,True,Halo Kak! Boleh dibantu informasikan nomor handphone anggota keluarga yang ingin dicek rincian tagihannya?,1.0,1.0,1.0,1.0,1.0,Correct (Abstention),9.477938652038574,0.0,0.0
+telco_live_irrelevance_3,Single-Turn,True,"<tool_call>
+{""name"": ""GET__rate_refill-coupons"", ""arguments"": ""{\""svcMgmtNum\"":\""08117422202\""}""}
+</tool_call>",0.0,0.0,0.0,1.0,0.0,Spurious Tool Call (Failed Abstention),10.368865013122559,0.0,0.0
+telco_live_irrelevance_4,Single-Turn,True,"<tool_call>
+{""name"": ""GET__plan"", ""arguments"": ""{\""minProdAmt\"": 50000, \""maxProdAmt\"": 150000, \""minProdAge\"": 0, \""maxProdAge\"": 30}""}
+</tool_call>",0.0,0.0,0.0,1.0,0.0,Spurious Tool Call (Failed Abstention),12.644176244735718,0.0,0.0
+telco_live_irrelevance_5,Single-Turn,True,"<tool_call>
+{""name"": ""GET__rate_family_info"", ""arguments"": ""{\""svcMgmtNum\"":\""08134722082\""}""}
+</tool_call>",0.0,0.0,0.0,1.0,0.0,Spurious Tool Call (Failed Abstention),9.96725058555603,0.0,0.0
+telco_live_irrelevance_6,Single-Turn,True,"<tool_call>
+{""name"": ""GET__info"", ""arguments"": ""{\""svcMgmtNum\"":\""08134722002\""}""}
+</tool_call>",0.0,0.0,0.0,1.0,0.0,Spurious Tool Call (Failed Abstention),9.724589109420776,0.0,0.0
+telco_live_irrelevance_7,Single-Turn,True,"<tool_call>
+{""name"": ""GET__plan"", ""arguments"": ""{\""minProdAmt\"": 30000, \""maxProdAmt\"": 50000}""}
+</tool_call>",0.0,0.0,0.0,1.0,0.0,Spurious Tool Call (Failed Abstention),10.26651668548584,0.0,0.0
+telco_live_irrelevance_8,Single-Turn,True,"<tool_call>
+{""name"": ""DELETE__rate_auto-payment"", ""arguments"": ""{\""svcMgmtNum\"":\""08114726201\""}""}
+</tool_call>",0.0,0.0,0.0,1.0,0.0,Spurious Tool Call (Failed Abstention),9.956409454345703,0.0,0.0
+telco_live_irrelevance_9,Single-Turn,True,"<tool_call>
+{""name"": ""GET__rate_family_bills"", ""arguments"": ""{\""familySvcMgmtNum\"":\""08117422070\"",\""svcMgmtNum\"":\""08135229213\""}""}
+</tool_call>",0.0,0.0,0.0,1.0,0.0,Spurious Tool Call (Failed Abstention),12.399729251861572,0.0,0.0
+telco_live_irrelevance_10,Single-Turn,True,Halo Kak! Boleh dibantu informasikan nomor handphone TelkomNusa yang ingin dicek rincian tagihannya?,1.0,1.0,1.0,1.0,1.0,Correct (Abstention),9.428022623062134,0.0,0.0
+telco_live_irrelevance_11,Single-Turn,True,"<tool_call>
+{""name"": ""GET__rate_unpaid-bills"", ""arguments"": ""{\""svcMgmtNum\"":\""08114722200\""}""}
+</tool_call>",0.0,0.0,0.0,1.0,0.0,Spurious Tool Call (Failed Abstention),10.20339298248291,0.0,0.0
+telco_live_irrelevance_12,Single-Turn,True,"<tool_call>
+{""name"": ""GET__plan_roaming_subscriptions"", ""arguments"": ""{\""countryCode\"":\""JP\"",\""countryName\"":\""Jepang\""}""}
+</tool_call>",0.0,0.0,0.0,1.0,0.0,Spurious Tool Call (Failed Abstention),9.67213749885559,0.0,0.0
+telco_live_irrelevance_13,Single-Turn,True,"<tool_call>
+{""name"": ""DELETE__rate_auto-payment"", ""arguments"": ""{\""svcMgmtNum\"":\""08117422201\""}""}
+</tool_call>",0.0,0.0,0.0,1.0,0.0,Spurious Tool Call (Failed Abstention),10.012965679168701,0.0,0.0
+telco_live_irrelevance_14,Single-Turn,True,"<tool_call>
+{""name"": ""GET__rate_refill-coupons"", ""arguments"": ""{\""svcMgmtNum\"":\""08137462101\""}""}
+</tool_call>",0.0,0.0,0.0,1.0,0.0,Spurious Tool Call (Failed Abstention),10.313669443130493,0.0,0.0
+telco_live_irrelevance_15,Single-Turn,True,Halo Kak! Boleh dibantu informasikan nomor handphone TelkomNusa yang ingin dicek kuota datanya?,1.0,1.0,1.0,1.0,1.0,Correct (Abstention),9.154804229736328,0.0,0.0
+telco_live_irrelevance_16,Single-Turn,True,"<tool_call>
+{""name"": ""GET__rate_unpaid-bills"", ""arguments"": ""{\""svcMgmtNum\"":\""08137462002\""}""}
+</tool_call>",0.0,0.0,0.0,1.0,0.0,Spurious Tool Call (Failed Abstention),10.15067172050476,0.0,0.0
+telco_live_irrelevance_17,Single-Turn,True,Halo Kak! Boleh dibantu masukkan nomor handphone TelkomNusa yang ingin dicek?,1.0,1.0,1.0,1.0,1.0,Correct (Abstention),8.498936414718628,0.0,0.0
+telco_live_irrelevance_18,Single-Turn,True,"<tool_call>
+{""name"": ""GET__plan_roaming"", ""arguments"": ""{\""countryCode\"":\""GB\"",\""countryName\"":\""Inggris\""}""}
+</tool_call>",0.0,0.0,0.0,1.0,0.0,Spurious Tool Call (Failed Abstention),9.30256199836731,0.0,0.0
+telco_live_irrelevance_19,Single-Turn,True,"<tool_call>
+{""name"": ""GET__rate_add-on-subscriptions"", ""arguments"": ""{\""svcMgmtNum\"":\""08127462081\""}""}
+</tool_call>",0.0,0.0,0.0,1.0,0.0,Spurious Tool Call (Failed Abstention),10.129786729812622,0.0,0.0
+telco_live_irrelevance_20,Single-Turn,True,"<tool_call>
+{""name"": ""GET__plan_roaming"", ""arguments"": ""{\""countryCode\"":\""US\"",\""countryName\"":\""United States\""}""}
+</tool_call>",0.0,0.0,0.0,1.0,0.0,Spurious Tool Call (Failed Abstention),9.21358036994934,0.0,0.0
+telco_live_irrelevance_21,Single-Turn,True,"<tool_call>
+{""name"": ""DELETE__auto-payment"", ""arguments"": ""{\""svcMgmtNum\"":\""08137462101\""}""}
+</tool_call>",0.0,0.0,0.0,1.0,0.0,Spurious Tool Call (Failed Abstention),9.825359344482422,0.0,0.0
+telco_live_irrelevance_22,Single-Turn,True,"<tool_call>
+{""name"": ""GET__rate_current-bills"", ""arguments"": ""{\""svcMgmtNum\"":\""08137462202\""}""}
+</tool_call>",0.0,0.0,0.0,1.0,0.0,Spurious Tool Call (Failed Abstention),10.090913534164429,0.0,0.0
+telco_live_irrelevance_23,Single-Turn,True,"<tool_call>
+{""name"": ""GET__plan"", ""arguments"": ""{\""minProdAmt\"": 0, \""maxProdAmt\"": 50000, \""minProdAge\"": 13, \""maxProdAge\"": 25}""}
+</tool_call>",0.0,0.0,0.0,1.0,0.0,Spurious Tool Call (Failed Abstention),11.9478440284729,0.0,0.0
+telco_live_irrelevance_24,Single-Turn,True,"<tool_call>
+{""name"": ""GET__rate_family_info"", ""arguments"": ""{\""svcMgmtNum\"":\""08134772202\""}""}
+</tool_call>",0.0,0.0,0.0,1.0,0.0,Spurious Tool Call (Failed Abstention),9.878896474838257,0.0,0.0
+telco_live_irrelevance_25,Single-Turn,True,"<tool_call>
+{""name"": ""GET__info"", ""arguments"": ""{\""svcMgmtNum\"":\""08134776202\""}""}
+</tool_call>",0.0,0.0,0.0,1.0,0.0,Spurious Tool Call (Failed Abstention),9.671064853668213,0.0,0.0
+telco_live_irrelevance_26,Single-Turn,True,"<tool_call>
+{""name"": ""GET__rate_current-bills"", ""arguments"": ""{\""svcMgmtNum\"":\""08127462101\""}""}
+</tool_call>",0.0,0.0,0.0,1.0,0.0,Spurious Tool Call (Failed Abstention),9.973279476165771,0.0,0.0
+telco_live_irrelevance_27,Single-Turn,True,Halo Kak! Boleh dibantu informasikan nomor handphone TelkomNusa yang ingin dicek?,1.0,1.0,1.0,1.0,1.0,Correct (Abstention),8.612093448638916,0.0,0.0
+telco_live_irrelevance_28,Single-Turn,True,"<tool_call>
+{""name"": ""GET__plan"", ""arguments"": ""{\""minProdAmt\"": 0, \""maxProdAmt\"": 150000}""}
+</tool_call>",0.0,0.0,0.0,1.0,0.0,Spurious Tool Call (Failed Abstention),9.922990083694458,0.0,0.0
+telco_live_irrelevance_29,Single-Turn,True,"<tool_call>
+{""name"": ""GET__rate_family_info"", ""arguments"": ""{\""svcMgmtNum\"":\""08134772002\""}""}
+</tool_call>",0.0,0.0,0.0,1.0,0.0,Spurious Tool Call (Failed Abstention),9.948497772216797,0.0,0.0
+telco_live_irrelevance_30,Single-Turn,True,Halo Kak! Boleh dibantu informasikan nomor handphone TelkomNusa yang ingin dicek?,1.0,1.0,1.0,1.0,1.0,Correct (Abstention),8.636806726455688,0.0,0.0
+telco_live_irrelevance_31,Single-Turn,True,Halo Kak! Boleh dibantu informasikan nomor handphone TelkomNusa yang ingin dicek?,1.0,1.0,1.0,1.0,1.0,Correct (Abstention),8.644729137420654,0.0,0.0
+telco_live_irrelevance_32,Single-Turn,True,Halo Kak! Boleh dibantu informasikan nomor handphone TelkomNusa yang ingin dicek masa kontraknya?,1.0,1.0,1.0,1.0,1.0,Correct (Abstention),9.094368696212769,0.0,0.0
+telco_live_irrelevance_33,Single-Turn,True,Halo Kak! Boleh dibantu informasikan nomor handphone TelkomNusa yang ingin dicek rincian biayanya?,1.0,1.0,1.0,1.0,1.0,Correct (Abstention),9.37669563293457,0.0,0.0
+telco_live_irrelevance_34,Single-Turn,True,"<tool_call>
+{""name"": ""GET__plan"", ""arguments"": ""{\""minProdAmt\"": 0, \""maxProdAmt\"": 100000}""}
+</tool_call>",0.0,0.0,0.0,1.0,0.0,Spurious Tool Call (Failed Abstention),10.058374166488647,0.0,0.0
+telco_live_irrelevance_35,Single-Turn,True,"<tool_call>
+{""name"": ""GET__plan"", ""arguments"": ""{\""minProdAmt\"": 50000, \""maxProdAmt\"": 150000, \""minProdAge\"": 18, \""maxProdAge\"": 25}""}
+</tool_call>",0.0,0.0,0.0,1.0,0.0,Spurious Tool Call (Failed Abstention),12.728610038757324,0.0,0.0
+telco_live_irrelevance_36,Single-Turn,True,"<tool_call>
+{""name"": ""GET__plan"", ""arguments"": ""{\""minProdAmt\"": 0, \""maxProdAmt\"": 90000, \""minProdAge\"": 18, \""maxProdAge\"": 65}""}
+</tool_call>",0.0,0.0,0.0,1.0,0.0,Spurious Tool Call (Failed Abstention),12.048800468444824,0.0,0.0
+telco_live_irrelevance_37,Single-Turn,True,Halo Kak! Boleh dibantu informasikan nomor handphone TelkomNusa yang ingin dicek?,1.0,1.0,1.0,1.0,1.0,Correct (Abstention),8.62636923789978,0.0,0.0
+telco_live_irrelevance_38,Single-Turn,True,"<tool_call>
+{""name"": ""GET__plan"", ""arguments"": ""{\""minProdAmt\"": 0, \""maxProdAmt\"": 70000, \""minProdAge\"": 15, \""maxProdAge\"": 25}""}
+</tool_call>",0.0,0.0,0.0,1.0,0.0,Spurious Tool Call (Failed Abstention),12.249767303466797,0.0,0.0
+telco_live_irrelevance_39,Single-Turn,True,"<tool_call>
+{""name"": ""DELETE__plan_roaming_subscriptions"", ""arguments"": ""{\""svcMgmtNum\"":\""08137462101\""}""}
+</tool_call>",0.0,0.0,0.0,1.0,0.0,Spurious Tool Call (Failed Abstention),10.183032989501953,0.0,0.0
+telco_live_irrelevance_40,Single-Turn,True,"<tool_call>
+{""name"": ""GET__plan"", ""arguments"": ""{\""minProdAmt\"": 80000, \""maxProdAmt\"": 80000, \""minProdAge\"": 18, \""maxProdAge\"": 65}""}
+</tool_call>",0.0,0.0,0.0,1.0,0.0,Spurious Tool Call (Failed Abstention),12.933600425720215,0.0,0.0
+telco_live_irrelevance_41,Single-Turn,True,Halo Kak! Boleh dibantu informasikan nomor handphone TelkomNusa yang ingin dicek?,1.0,1.0,1.0,1.0,1.0,Correct (Abstention),8.645353555679321,0.0,0.0
+telco_live_irrelevance_42,Single-Turn,True,"<tool_call>
+{""name"": ""GET__rate_refill-coupons"", ""arguments"": ""{\""svcMgmtNum\"":\""08127462002\""}""}
+</tool_call>",0.0,0.0,0.0,1.0,0.0,Spurious Tool Call (Failed Abstention),10.332518577575684,0.0,0.0
+telco_live_irrelevance_43,Single-Turn,True,Halo Kak! Boleh dibantu informasikan nomor handphone TelkomNusa yang ingin dicek?,1.0,1.0,1.0,1.0,1.0,Correct (Abstention),8.606924772262573,0.0,0.0
+telco_live_irrelevance_44,Single-Turn,True,"<tool_call>
+{""name"": ""DELETE__plan_roaming_subscriptions"", ""arguments"": ""{\""svcMgmtNum\"":\""08137462101\""}""}
+</tool_call>",0.0,0.0,0.0,1.0,0.0,Spurious Tool Call (Failed Abstention),10.254521131515503,0.0,0.0
+telco_live_irrelevance_45,Single-Turn,True,"<tool_call>
+{""name"": ""GET__rate_unpaid-bills"", ""arguments"": ""{\""svcMgmtNum\"":\""08114722200\""}""}
+</tool_call>",0.0,0.0,0.0,1.0,0.0,Spurious Tool Call (Failed Abstention),10.22182559967041,0.0,0.0
+telco_live_irrelevance_46,Single-Turn,True,"<tool_call>
+{""name"": ""GET__plan"", ""arguments"": ""{\""minProdAmt\"": 100000, \""maxProdAmt\"": 1500000, \""minProdAge\"": 18, \""maxProdAge\"": 65}""}
+</tool_call>",0.0,0.0,0.0,1.0,0.0,Spurious Tool Call (Failed Abstention),12.853017091751099,0.0,0.0
+telco_live_irrelevance_47,Single-Turn,True,"<tool_call>
+{""name"": ""GET__rate_add-on-subscriptions"", ""arguments"": ""{\""svcMgmtNum\"":\""08137462181\""}""}
+</tool_call>",0.0,0.0,0.0,1.0,0.0,Spurious Tool Call (Failed Abstention),10.21424913406372,0.0,0.0
+telco_live_irrelevance_48,Single-Turn,True,"<tool_call>
+{""name"": ""GET__rate_mobile-payments"", ""arguments"": ""{\""startDt\"": \""20250601\"", \""endDt\"": \""20250617\"", \""svcMgmtNum\"": \""08124397601\""}""}
+</tool_call>",0.0,0.0,0.0,1.0,0.0,Spurious Tool Call (Failed Abstention),13.566290616989136,0.0,0.0
+telco_live_irrelevance_49,Single-Turn,True,"<tool_call>
+{""name"": ""GET__plan"", ""arguments"": ""{\""minProdAmt\"": 0, \""maxProdAmt\"": 80000, \""minProdAge\"": 18, \""maxProdAge\"": 65}""}
+</tool_call>",0.0,0.0,0.0,1.0,0.0,Spurious Tool Call (Failed Abstention),11.968352317810059,0.0,0.0
+telco_live_irrelevance_50,Single-Turn,True,"<tool_call>
+{""name"": ""GET__rate_refill-coupons"", ""arguments"": ""{\""svcMgmtNum\"":\""08114726202\""}""}
+</tool_call>",0.0,0.0,0.0,1.0,0.0,Spurious Tool Call (Failed Abstention),10.24331545829773,0.0,0.0
+telco_live_irrelevance_51,Single-Turn,True,"<tool_call>
+{""name"": ""POST__rate_refill-coupons_use"", ""arguments"": ""{\""rfilTrgtltm\"":\""data\"",\""svcMgmtNum\"":\""08127462101\""}""}
+</tool_call>",0.0,0.0,0.0,1.0,0.0,Spurious Tool Call (Failed Abstention),11.451811790466309,0.0,0.0
+telco_live_irrelevance_52,Single-Turn,True,"<tool_call>
+{""name"": ""GET__rate_fixed-bills"", ""arguments"": ""{\""startDt\"": \""20250401\"", \""endDt\"": \""20250531\"", \""svcMgmtNum\"": \""08127268601\""}""}
+</tool_call>",0.0,0.0,0.0,1.0,0.0,Spurious Tool Call (Failed Abstention),13.574856519699097,0.0,0.0
+telco_live_irrelevance_53,Single-Turn,True,Halo Kak! Boleh dibantu informasikan nomor handphone anggota keluarga yang ingin dicek tagihannya?,1.0,1.0,1.0,1.0,1.0,Correct (Abstention),9.019416093826294,0.0,0.0
+telco_live_irrelevance_54,Single-Turn,True,"Halo Kak! Kami mohon maaf atas ketidaknyamanan yang dialami. Keluhan Anda telah kami catat untuk diteruskan ke tim optimasi jaringan kami. Untuk pengecekan kendala lebih lanjut, pastikan perangkat telah di-restart atau hubungi call center 188. Ada layanan lain yang bisa kami bantu?",1.0,1.0,1.0,1.0,1.0,Correct (Abstention),15.323521614074707,0.0,0.0
+telco_multi_turn_stateless_base_0,Multi-Turn,,"[[{""name"": ""GET__rate_content-purchases"", ""arguments"": {""startDt"": ""20250501"", ""endDt"": ""20250531"", ""svcMgmtNum"": ""01099993333""}}], [{""name"": ""GET__rate_content-purchases"", ""arguments"": {""startDt"": ""20250501"", ""endDt"": ""20250531"", ""svcMgmtNum"": ""01099993333""}}], [{""name"": ""GET__rate_fixed-bills"", ""arguments"": {""startDt"": ""20250501"", ""endDt"": ""20250531"", ""svcMgmtNum"": ""01099993333""}}]]",0.6666666666666666,0.6666666666666666,0.6666666666666666,1.0,,Per-Turn Evaluated (3 Turns),14.07930850982666,0.0,54.76
+telco_multi_turn_stateless_base_1,Multi-Turn,,"[[{""name"": ""GET__rate_unpaid-bills"", ""arguments"": {""svcMgmtNum"": ""0105556666""}}], [{""name"": ""GET__rate_add-on-subscriptions"", ""arguments"": {""svcMgmtNum"": ""0105556666""}}], [{""name"": ""DELETE__rate_add-on-subscriptions"", ""arguments"": {""prodId"": ""AD00000003"", ""svcMgmtNum"": ""0105556666""}}], []]",0.75,0.75,0.75,1.0,,Per-Turn Evaluated (4 Turns),11.323401391506195,0.0,58.7
+telco_multi_turn_stateless_base_2,Multi-Turn,,"[[{""name"": ""GET__rate_content-purchases"", ""arguments"": {""startDt"": ""20250501"", ""endDt"": ""20250531"", ""svcMgmtNum"": ""01099993333""}}], [{""name"": ""GET__rate_content-purchases"", ""arguments"": {""startDt"": ""20250501"", ""endDt"": ""20250531"", ""svcMgmtNum"": ""08114726212""}}]]",0.5,0.5,0.5,1.0,,Per-Turn Evaluated (2 Turns),13.954771399497986,0.0,50.0
+telco_multi_turn_stateless_base_3,Multi-Turn,,"[[{""name"": ""DELETE__plan_roaming_subscriptions"", ""arguments"": {""svcMgmtNum"": ""0108889999""}}], [{""name"": ""GET__rate_content-purchases"", ""arguments"": {""startDt"": ""20250601"", ""endDt"": ""20250630"", ""svcMgmtNum"": ""0108889999""}}]]",0.5,0.0,0.0,1.0,,Per-Turn Evaluated (2 Turns),11.82875943183899,0.0,45.83
+telco_multi_turn_stateless_base_4,Multi-Turn,,"[[{""name"": ""GET__rate_add-on-subscriptions"", ""arguments"": {""svcMgmtNum"": ""01033333333""}}], [{""name"": ""DELETE__rate_add-on-subscriptions"", ""arguments"": {""prodId"": ""AD00000003"", ""svcMgmtNum"": ""01033333333""}}]]",1.0,0.0,0.0,1.0,,Per-Turn Evaluated (2 Turns),11.29360044002533,0.0,58.33
+telco_multi_turn_stateless_base_5,Multi-Turn,,"[[{""name"": ""GET__rate_current-bills"", ""arguments"": {""svcMgmtNum"": ""0101110000""}}], [{""name"": ""GET__rate_add-on-subscriptions"", ""arguments"": {""svcMgmtNum"": ""0101110000""}}], [{""name"": ""DELETE__rate_add-on-subscriptions"", ""arguments"": {""prodId"": ""AD00000003"", ""svcMgmtNum"": ""0101110000""}}], [{""name"": ""GET__rate_current-data-limits"", ""arguments"": {""svcMgmtNum"": ""0101110000""}}], [{""name"": ""GET__rate_mobile-payments"", ""arguments"": {""startDt"": ""20250601"", ""endDt"": ""20250701"", ""svcMgmtNum"": ""0101110000""}}]]",1.0,0.6,0.6,1.0,,Per-Turn Evaluated (5 Turns),11.538016843795777,0.0,67.8
+telco_multi_turn_stateless_base_6,Multi-Turn,,"[[{""name"": ""GET__info"", ""arguments"": {""svcMgmtNum"": ""0107778888""}}], [{""name"": ""GET__plan"", ""arguments"": {""minProdAmt"": 50000, ""maxProdAmt"": 100000, ""minProdAge"": 13, ""maxProdAge"": 25}}]]",1.0,0.5,0.5,1.0,,Per-Turn Evaluated (2 Turns),10.903793454170227,0.0,35.0
+telco_multi_turn_stateless_base_7,Multi-Turn,,"[[{""name"": ""GET__rate_refill-coupons"", ""arguments"": {""svcMgmtNum"": ""01099993333""}}], [{""name"": ""GET__rate_family_info"", ""arguments"": {""svcMgmtNum"": ""01099993333""}}]]",0.5,0.5,0.5,1.0,,Per-Turn Evaluated (2 Turns),10.492256164550781,0.0,50.0
+telco_multi_turn_stateless_base_8,Multi-Turn,,"[[], [{""name"": ""DELETE__rate_add-on-subscriptions"", ""arguments"": {""prodId"": ""AD00000003"", ""svcMgmtNum"": ""0108889999""}}], [{""name"": ""POST__rate_refill-coupons_use"", ""arguments"": {""rfilTrgtltm"": ""data"", ""svcMgmtNum"": ""0108889999""}}]]",0.6666666666666666,0.0,0.0,1.0,,Per-Turn Evaluated (3 Turns),11.017906506856283,0.0,37.5
+telco_multi_turn_stateless_base_9,Multi-Turn,,"[[{""name"": ""GET__rate_unpaid-bills"", ""arguments"": {""svcMgmtNum"": ""08114822220""}}], [{""name"": ""POST__rate_unpaid-bills_payment"", ""arguments"": {""svcMgmtNum"": ""08114822220""}}]]",1.0,0.0,0.0,1.0,,Per-Turn Evaluated (2 Turns),10.571672081947327,0.0,50.85
+telco_multi_turn_stateless_base_10,Multi-Turn,,"[[{""name"": ""GET__rate_family_data-usage"", ""arguments"": {""familySvcMgmtNum"": ""08114722272"", ""svcMgmtNum"": ""0108889999""}}], [{""name"": ""GET__rate_refill-coupons"", ""arguments"": {""svcMgmtNum"": ""0108889999""}}], [{""name"": ""POST__rate_refill-coupons_use"", ""arguments"": {""rfilTrgtltm"": ""data"", ""svcMgmtNum"": ""0108889999""}}]]",1.0,0.0,0.0,1.0,,Per-Turn Evaluated (3 Turns),11.730211814244589,0.0,58.33
+telco_multi_turn_stateless_base_11,Multi-Turn,,"[[], [{""name"": ""GET__rate_family_bills"", ""arguments"": {""familySvcMgmtNum"": ""08114722272"", ""svcMgmtNum"": ""0103335555""}}]]",0.5,0.0,0.0,1.0,,Per-Turn Evaluated (2 Turns),10.555583000183105,0.0,34.62
+telco_multi_turn_stateless_base_12,Multi-Turn,,"[[{""name"": ""GET__rate_current-data-limits"", ""arguments"": {""svcMgmtNum"": ""0107779999""}}], [{""name"": ""GET__rate_current-data-limits"", ""arguments"": {""svcMgmtNum"": ""08114622222""}}]]",0.5,0.5,0.5,1.0,,Per-Turn Evaluated (2 Turns),10.546956896781921,0.0,56.52
+telco_multi_turn_stateless_base_13,Multi-Turn,,"[[{""name"": ""GET__rate_family_real-time-bill"", ""arguments"": {""familySvcMgmtNum"": ""08114722262"", ""svcMgmtNum"": ""01022221111""}}], [{""name"": ""GET__rate_current-bills"", ""arguments"": {""svcMgmtNum"": ""08114722262""}}], [{""name"": ""GET__rate_family_data-usage"", ""arguments"": {""familySvcMgmtNum"": ""08114722262"", ""svcMgmtNum"": ""01022221111""}}]]",0.3333333333333333,0.0,0.0,1.0,,Per-Turn Evaluated (3 Turns),12.095956246058146,0.0,51.28
+telco_multi_turn_stateless_base_14,Multi-Turn,,"[[{""name"": ""GET__rate_fixed-bills"", ""arguments"": {""startDt"": ""20250501"", ""endDt"": ""20250531"", ""svcMgmtNum"": ""0101113333""}}], [{""name"": ""GET__rate_fixed-bills"", ""arguments"": {""startDt"": ""20250501"", ""endDt"": ""20250531"", ""svcMgmtNum"": ""08134772002""}}]]",0.5,0.5,0.5,1.0,,Per-Turn Evaluated (2 Turns),13.360514521598816,0.0,50.0
+telco_multi_turn_stateless_base_15,Multi-Turn,,"[[{""name"": ""GET__rate_family_data-usage"", ""arguments"": {""familySvcMgmtNum"": ""08114822272"", ""svcMgmtNum"": ""0107779999""}}], [{""name"": ""GET__rate_family_real-time-bill"", ""arguments"": {""familySvcMgmtNum"": ""08114822272"", ""svcMgmtNum"": ""0107779999""}}], [{""name"": ""GET__rate_family_bills"", ""arguments"": {""familySvcMgmtNum"": ""08114822272"", ""svcMgmtNum"": ""0107779999""}}]]",1.0,0.0,0.0,1.0,,Per-Turn Evaluated (3 Turns),12.672693729400635,0.0,66.67
+telco_multi_turn_stateless_base_16,Multi-Turn,,"[[{""name"": ""GET__rate_add-on-subscriptions"", ""arguments"": {""svcMgmtNum"": ""01022221111""}}], [{""name"": ""GET__rate_add-on-subscriptions"", ""arguments"": {""svcMgmtNum"": ""01022221111""}}]]",0.5,0.5,0.5,1.0,,Per-Turn Evaluated (2 Turns),10.53814971446991,0.0,60.87
+telco_multi_turn_stateless_base_17,Multi-Turn,,"[[{""name"": ""GET__rate_current-bills"", ""arguments"": {""svcMgmtNum"": ""0104445555""}}], [{""name"": ""DELETE__rate_auto-payment"", ""arguments"": {""svcMgmtNum"": ""0104445555""}}]]",1.0,1.0,1.0,1.0,,Per-Turn Evaluated (2 Turns),10.204609870910645,0.0,65.0
+telco_multi_turn_stateless_base_18,Multi-Turn,,"[[{""name"": ""GET__rate_family_info"", ""arguments"": {""svcMgmtNum"": ""0101113333""}}], [{""name"": ""GET__rate_family_real-time-bill"", ""arguments"": {""familySvcMgmtNum"": ""08114722070"", ""svcMgmtNum"": ""0101113333""}}]]",1.0,0.5,0.5,1.0,,Per-Turn Evaluated (2 Turns),11.600865125656128,0.0,62.5
+telco_multi_turn_stateless_base_19,Multi-Turn,,"[[{""name"": ""GET__rate_family_info"", ""arguments"": {""svcMgmtNum"": ""0104445555""}}], [{""name"": ""GET__rate_family_data-usage"", ""arguments"": {""familySvcMgmtNum"": ""08117292002"", ""svcMgmtNum"": ""0104445555""}}]]",1.0,0.5,0.5,1.0,,Per-Turn Evaluated (2 Turns),11.429885745048523,0.0,60.87
+telco_multi_turn_stateless_base_20,Multi-Turn,,"[[], [{""name"": ""GET__rate_content-purchases"", ""arguments"": {""startDt"": ""20250601"", ""endDt"": ""20250630"", ""svcMgmtNum"": ""0104445555""}}]]",0.0,0.0,0.0,1.0,,Per-Turn Evaluated (2 Turns),11.787550210952759,0.0,37.74
+telco_multi_turn_stateless_base_21,Multi-Turn,,"[[{""name"": ""GET__rate_add-on-subscriptions"", ""arguments"": {""svcMgmtNum"": ""01099993333""}}], [{""name"": ""DELETE__rate_add-on-subscriptions"", ""arguments"": {""prodId"": ""AD00000003"", ""svcMgmtNum"": ""01099993333""}}]]",1.0,0.5,0.5,1.0,,Per-Turn Evaluated (2 Turns),11.385898470878601,0.0,62.5
+telco_multi_turn_stateless_base_22,Multi-Turn,,"[[{""name"": ""GET__plan_roaming"", ""arguments"": {""countryCode"": ""VN"", ""countryName"": ""Vietnam""}}], [{""name"": ""POST__rate_refill-coupons_use"", ""arguments"": {""rfilTrgtltm"": ""data"", ""svcMgmtNum"": ""0108889999""}}]]",0.5,0.5,0.5,1.0,,Per-Turn Evaluated (2 Turns),10.645538330078125,0.0,31.11
+telco_multi_turn_stateless_base_23,Multi-Turn,,"[[{""name"": ""GET__rate_current-bills"", ""arguments"": {""svcMgmtNum"": ""01099993333""}}], [{""name"": ""GET__rate_content-purchases"", ""arguments"": {""startDt"": ""20250401"", ""endDt"": ""20250430"", ""svcMgmtNum"": ""01099993333""}}], [{""name"": ""GET__rate_family_bills"", ""arguments"": {""familySvcMgmtNum"": ""08117221002"", ""svcMgmtNum"": ""01099993333""}}]]",0.3333333333333333,0.3333333333333333,0.3333333333333333,1.0,,Per-Turn Evaluated (3 Turns),12.269917805989584,0.0,48.72
+telco_multi_turn_stateless_base_24,Multi-Turn,,"[[{""name"": ""GET__rate_current-bills"", ""arguments"": {""svcMgmtNum"": ""0105556666""}}], [{""name"": ""GET__rate_content-purchases"", ""arguments"": {""startDt"": ""20250501"", ""endDt"": ""20250531"", ""svcMgmtNum"": ""0105556666""}}], [{""name"": ""DELETE__plan_roaming_subscriptions"", ""arguments"": {""svcMgmtNum"": ""0105556666""}}], [{""name"": ""GET__plan_roaming_subscriptions"", ""arguments"": {""countryCode"": ""CN"", ""countryName"": ""China""}}]]",0.75,0.75,0.75,1.0,,Per-Turn Evaluated (4 Turns),11.163349390029907,0.0,57.78
+telco_multi_turn_stateless_base_25,Multi-Turn,,"[[{""name"": ""GET__rate_add-on-subscriptions"", ""arguments"": {""svcMgmtNum"": ""01099993333""}}], [{""name"": ""DELETE__rate_add-on-subscriptions"", ""arguments"": {""prodId"": ""AD00000003"", ""svcMgmtNum"": ""01099993333""}}]]",1.0,1.0,1.0,1.0,,Per-Turn Evaluated (2 Turns),11.378254294395447,0.0,62.5
+telco_multi_turn_stateless_base_26,Multi-Turn,,"[[{""name"": ""GET__rate_current-data-limits"", ""arguments"": {""svcMgmtNum"": ""0108889999""}}], [{""name"": ""GET__plan"", ""arguments"": {""minProdAmt"": 0, ""maxProdAmt"": 130000, ""minProdAge"": 0, ""maxProdAge"": 150}}]]",1.0,1.0,1.0,1.0,,Per-Turn Evaluated (2 Turns),10.974992275238037,0.0,45.45
+telco_multi_turn_stateless_base_27,Multi-Turn,,"[[{""name"": ""GET__rate_add-on-subscriptions"", ""arguments"": {""svcMgmtNum"": ""01033333333""}}], [{""name"": ""DELETE__rate_add-on-subscriptions"", ""arguments"": {""prodId"": ""AD000000000000000001"", ""svcMgmtNum"": ""01033333333""}}]]",1.0,0.0,0.0,1.0,,Per-Turn Evaluated (2 Turns),11.982157707214355,0.0,58.33
+telco_multi_turn_stateless_base_28,Multi-Turn,,"[[{""name"": ""GET__rate_current-bills"", ""arguments"": {""svcMgmtNum"": ""0101110000""}}], [{""name"": ""GET__rate_add-on-subscriptions"", ""arguments"": {""svcMgmtNum"": ""0101110000""}}], [{""name"": ""DELETE__rate_add-on-subscriptions"", ""arguments"": {""prodId"": ""AD00000003"", ""svcMgmtNum"": ""0101110000""}}], [{""name"": ""GET__rate_current-data-limits"", ""arguments"": {""svcMgmtNum"": ""0101110000""}}], [{""name"": ""GET__rate_mobile-payments"", ""arguments"": {""startDt"": ""20250601"", ""endDt"": ""20250701"", ""svcMgmtNum"": ""0101110000""}}]]",1.0,0.6,0.6,1.0,,Per-Turn Evaluated (5 Turns),11.52840805053711,0.0,67.8
+telco_multi_turn_stateless_base_29,Multi-Turn,,"[[{""name"": ""GET__info"", ""arguments"": {""svcMgmtNum"": ""0107778888""}}], [{""name"": ""GET__plan"", ""arguments"": {""minProdAmt"": 80000, ""maxProdAmt"": 80000, ""minProdAge"": 13, ""maxProdAge"": 18}}]]",1.0,0.5,0.5,1.0,,Per-Turn Evaluated (2 Turns),10.889208793640137,0.0,42.86
+telco_multi_turn_stateless_base_30,Multi-Turn,,"[[{""name"": ""DELETE__rate_family_bills"", ""arguments"": {""familySvcMgmtNum"": ""08117221002"", ""svcMgmtNum"": ""01099993333""}}], [{""name"": ""GET__rate_family_real-time-bill"", ""arguments"": {""familySvcMgmtNum"": ""08117221002"", ""svcMgmtNum"": ""01099993333""}}]]",0.0,0.0,0.0,1.0,,Per-Turn Evaluated (2 Turns),12.62064814567566,0.0,47.06
+telco_multi_turn_stateless_base_31,Multi-Turn,,"[[], [], [{""name"": ""GET__rate_current-bills"", ""arguments"": {""svcMgmtNum"": ""08534722002""}}]]",0.0,0.0,0.0,1.0,,Per-Turn Evaluated (3 Turns),9.338529348373413,0.0,10.87
+telco_multi_turn_stateless_base_32,Multi-Turn,,"[[{""name"": ""GET__rate_family_data-usage"", ""arguments"": {""familySvcMgmtNum"": ""08114622072"", ""svcMgmtNum"": ""0107779999""}}], [{""name"": ""GET__rate_refill-coupons"", ""arguments"": {""svcMgmtNum"": ""08114622072""}}]]",0.5,0.0,0.0,1.0,,Per-Turn Evaluated (2 Turns),11.64034378528595,0.0,50.0
+telco_multi_turn_stateless_base_33,Multi-Turn,,"[[{""name"": ""GET__rate_family_data-usage"", ""arguments"": {""familySvcMgmtNum"": ""08114722272"", ""svcMgmtNum"": ""0108889999""}}], [{""name"": ""GET__rate_refill-coupons"", ""arguments"": {""svcMgmtNum"": ""0108889999""}}], [{""name"": ""POST__rate_refill-coupons_use"", ""arguments"": {""rfilTrgtltm"": ""data"", ""svcMgmtNum"": ""0108889999""}}]]",1.0,0.0,0.0,1.0,,Per-Turn Evaluated (3 Turns),11.62230396270752,0.0,58.33
+telco_multi_turn_stateless_base_34,Multi-Turn,,"[[{""name"": ""GET__rate_family_data-usage"", ""arguments"": {""familySvcMgmtNum"": ""08114722272"", ""svcMgmtNum"": ""0103335555""}}], [{""name"": ""GET__rate_family_data-usage"", ""arguments"": {""familySvcMgmtNum"": ""08114722272"", ""svcMgmtNum"": ""0103335555""}}]]",1.0,0.0,0.0,1.0,,Per-Turn Evaluated (2 Turns),12.491627097129822,0.0,61.54
+telco_multi_turn_stateless_base_35,Multi-Turn,,"[[{""name"": ""GET__rate_family_info"", ""arguments"": {""svcMgmtNum"": ""0107779999""}}], [{""name"": ""GET__rate_family_bills"", ""arguments"": {""familySvcMgmtNum"": ""08114222333"", ""svcMgmtNum"": ""0107779999""}}]]",0.5,0.5,0.5,1.0,,Per-Turn Evaluated (2 Turns),11.305383443832397,0.0,52.0
+telco_multi_turn_stateless_base_36,Multi-Turn,,"[[{""name"": ""GET__rate_family_bills"", ""arguments"": {""familySvcMgmtNum"": ""08114722262"", ""svcMgmtNum"": ""01022221111""}}], [{""name"": ""GET__rate_current-bills"", ""arguments"": {""svcMgmtNum"": ""01022221111""}}], [{""name"": ""GET__rate_family_bills"", ""arguments"": {""familySvcMgmtNum"": ""08114722262"", ""svcMgmtNum"": ""01022221111""}}]]",0.0,0.0,0.0,1.0,,Per-Turn Evaluated (3 Turns),11.91022022565206,0.0,44.74
+telco_multi_turn_stateless_base_37,Multi-Turn,,"[[{""name"": ""GET__rate_fixed-bills"", ""arguments"": {""startDt"": ""20250401"", ""endDt"": ""20250430"", ""svcMgmtNum"": ""0101113333""}}], [{""name"": ""GET__rate_mobile-payments"", ""arguments"": {""startDt"": ""20250401"", ""endDt"": ""20250430"", ""svcMgmtNum"": ""0101113333""}}]]",1.0,1.0,1.0,1.0,,Per-Turn Evaluated (2 Turns),13.181666135787964,0.0,53.57
+telco_multi_turn_stateless_base_38,Multi-Turn,,"[[{""name"": ""GET__rate_family_data-usage"", ""arguments"": {""familySvcMgmtNum"": ""08114822272"", ""svcMgmtNum"": ""0107779999""}}], [{""name"": ""GET__rate_family_real-time-bill"", ""arguments"": {""familySvcMgmtNum"": ""08114822272"", ""svcMgmtNum"": ""0107779999""}}], [{""name"": ""GET__rate_family_bills"", ""arguments"": {""familySvcMgmtNum"": ""08114822272"", ""svcMgmtNum"": ""0107779999""}}]]",1.0,0.0,0.0,1.0,,Per-Turn Evaluated (3 Turns),12.605276902516684,0.0,66.67
+telco_multi_turn_stateless_base_39,Multi-Turn,,"[[{""name"": ""GET__rate_current-data-limits"", ""arguments"": {""svcMgmtNum"": ""01022221111""}}], [{""name"": ""GET__rate_refill-coupons"", ""arguments"": {""svcMgmtNum"": ""01022221111""}}], [{""name"": ""POST__rate_refill-coupons_use"", ""arguments"": {""rfilTrgtltm"": ""data"", ""svcMgmtNum"": ""01022221111""}}]]",0.6666666666666666,0.0,0.0,1.0,,Per-Turn Evaluated (3 Turns),10.980947097142538,0.0,54.29
+telco_multi_turn_stateless_base_40,Multi-Turn,,"[[{""name"": ""GET__rate_family_info"", ""arguments"": {""svcMgmtNum"": ""0104445555""}}], []]",0.0,0.0,0.0,1.0,,Per-Turn Evaluated (2 Turns),11.190350890159607,0.0,33.33
+telco_multi_turn_stateless_base_41,Multi-Turn,,"[[{""name"": ""GET__rate_family_info"", ""arguments"": {""svcMgmtNum"": ""0101113333""}}], [{""name"": ""GET__rate_content-purchases"", ""arguments"": {""startDt"": ""20250501"", ""endDt"": ""20250531"", ""svcMgmtNum"": ""08114797600""}}]]",1.0,0.5,0.5,1.0,,Per-Turn Evaluated (2 Turns),11.733806371688843,0.0,50.0
+telco_multi_turn_stateless_base_42,Multi-Turn,,"[[{""name"": ""GET__rate_family_info"", ""arguments"": {""svcMgmtNum"": ""0104445555""}}], [{""name"": ""GET__rate_family_info"", ""arguments"": {""svcMgmtNum"": ""0104445555""}}]]",0.5,0.5,0.5,1.0,,Per-Turn Evaluated (2 Turns),10.104584693908691,0.0,52.63
+telco_multi_turn_stateless_base_43,Multi-Turn,,"[[{""name"": ""GET__rate_content-purchases"", ""arguments"": {""startDt"": ""20250601"", ""endDt"": ""20250630"", ""svcMgmtNum"": ""0104445555""}}], [{""name"": ""GET__rate_mobile-payments"", ""arguments"": {""startDt"": ""20250601"", ""endDt"": ""20250630"", ""svcMgmtNum"": ""0104445555""}}]]",1.0,0.5,0.5,1.0,,Per-Turn Evaluated (2 Turns),13.102859377861023,0.0,53.57
+telco_multi_turn_stateless_base_44,Multi-Turn,,"[[{""name"": ""GET__rate_family_bills"", ""arguments"": {""familySvcMgmtNum"": ""08114722272"", ""svcMgmtNum"": ""01099993333""}}], [{""name"": ""GET__rate_family_real-time-bill"", ""arguments"": {""familySvcMgmtNum"": ""08114722272"", ""svcMgmtNum"": ""01099993333""}}]]",0.0,0.0,0.0,1.0,,Per-Turn Evaluated (2 Turns),12.762771129608154,0.0,46.15
+telco_multi_turn_stateless_base_45,Multi-Turn,,"[[{""name"": ""GET__rate_family_info"", ""arguments"": {""svcMgmtNum"": ""0108889999""}}], [{""name"": ""GET__rate_family_info"", ""arguments"": {""svcMgmtNum"": ""0155746900""}}]]",0.0,0.0,0.0,1.0,,Per-Turn Evaluated (2 Turns),10.10451340675354,0.0,38.1
