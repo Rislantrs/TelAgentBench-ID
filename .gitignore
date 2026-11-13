@@ -1,0 +1,28 @@
+# Environment & Secrets (NEVER COMMIT)
+.env
+.env.*
+!.env.example
+*secret*
+*token*
+*.key
+*.pem
+
+# Python & Jupyter
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.venv/
+venv/
+
+# Model Checkpoints & Large Weights
+*.bin
+*.safetensors
+*.gguf
+outputs/
+wandb/
+unsloth_compiled_cache/
+
+# Private Manuscripts & Word Drafts
+*.docx
+*.pdf
+_archive/

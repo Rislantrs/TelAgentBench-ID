@@ -1,0 +1,13 @@
+Model Name,Category,Regime,ST Tool Acc (%),ST Arg Match (%),ST Strict AST (%),MT Strict AST (%),Macro Strict AST (%),Micro Strict AST (%),Macro-F1 (%),Format Valid (%),Latency (s),Throughput (tok/s),BLEU-4,ROUGE-L,Hardware & Serving
+Claude-Opus-5,Proprietary Cloud,Regime B,89.09,87.27,87.27,64.42,75.85,76.86,78.40,99.01,3.94,28.40,9.40,42.01,Cloud API (Multi-Tenant Server)
+MiniMax-M3,Proprietary Cloud,Regime B,87.27,85.45,85.45,21.88,53.67,56.50,61.20,97.03,5.43,18.20,10.19,43.52,Cloud API (OpenRouter Endpoint)
+Gemma4-31B,Mid-to-Large Open,Regime A,94.55,85.45,85.45,64.17,74.81,75.76,76.12,100.00,1.35,42.50,3.11,30.75,Dedicated vLLM Server (>28 GB VRAM)
+GPT-OSS-20B,Mid-to-Large Open,Regime A,89.09,87.27,87.27,57.10,72.19,73.53,74.90,97.44,2.65,22.80,1.84,28.85,Dedicated vLLM Server (~18 GB VRAM)
+GPT-OSS-120B,Mid-to-Large Open,Regime A,85.45,80.00,80.00,59.82,69.91,70.81,72.35,98.72,1.52,38.20,1.74,28.11,Multi-GPU vLLM Cluster (>75 GB VRAM)
+Nemotron-30B,Mid-to-Large Open,Regime A,61.82,61.82,61.82,14.24,38.03,40.15,34.50,68.59,3.58,18.40,0.86,14.52,Dedicated vLLM Server (>26 GB VRAM)
+TelkomNusa-LLM-7B,Proposed LoRA SLM,Regime A,89.09,83.64,83.64,33.04,58.34,60.59,74.20,100.00,11.02,4.85,0.00,30.24,1x NVIDIA L4 (~9.2 GB VRAM)
+TelkomNusa-SLM-3B,Proposed LoRA SLM,Regime A,85.45,72.73,72.73,16.38,44.55,47.07,68.45,100.00,10.30,5.12,0.00,29.77,1x NVIDIA T4 (~5.8 GB VRAM)
+Llama-3.2-3B-Instruct,Open-Weight Baseline,Regime B,81.82,78.18,78.18,3.99,41.09,44.39,42.10,100.00,22.03,2.15,8.70,44.47,1x NVIDIA T4 (~6.1 GB VRAM)
+Qwen2.5-7B-Instruct (Untuned),Open-Weight Baseline,Regime A,85.45,81.82,81.82,0.00,40.91,44.55,41.80,98.18,5.93,8.58,74.20,79.50,1x NVIDIA L4 (~9.2 GB VRAM)
+Qwen2.5-3B-Instruct (Untuned),Open-Weight Baseline,Regime A,67.27,61.82,61.82,4.13,32.98,35.55,47.26,99.01,7.65,6.63,5.78,38.86,1x NVIDIA T4 (~5.8 GB VRAM)
+Phi-4-mini,Open-Weight Baseline,Regime B,10.91,10.91,10.91,0.00,5.46,5.94,4.80,97.03,6.68,7.40,3.68,22.32,1x NVIDIA T4 (~6.8 GB VRAM)
